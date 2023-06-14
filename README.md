@@ -6,7 +6,7 @@ I wrote this repository for learning purpose, the anwers below are my own soluti
 
 - [User's Third Transaction Uber SQL Interview Question](#user's-third-transaction-uber-sql-interview-question)
 - [Sending vs Opening Snaps Snapchat SQL Interview Question](#sending-vs-opening-snaps-snapchat-sql-interview-question)
-- [Tweets' Rolling Averages Twitter SQL Interview Question](#tweets'-rolling-averages-twitter-sql-interview-question)
+- [Tweets Rolling Averages Twitter SQL Interview Question](#tweets-rolling-averages-twitter-sql-interview-question)
 - [Highest Grossing Items Amazon SQL Interview Question](#highest-grossing-items-amazon-sql-interview-question)
 - [Duplicate Job Listings Linkedin SQL Interview Question](#duplicate-job-listings-linkedin-sql-interview-question)
 - [Average Review Ratings Amazon SQL Interview Question](#average-review-ratings-amazon-sql-interview-question)
@@ -94,7 +94,7 @@ group by age_bucket ) y
 <img width="397" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/f1e3f63b-2605-4cc0-b9ad-19f7c28b5553">
 <br></br>
 
-## Tweets' Rolling Averages Twitter SQL Interview Question
+## Tweets Rolling Averages Twitter SQL Interview Question
 
 ***Question:***
 
