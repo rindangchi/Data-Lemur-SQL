@@ -27,6 +27,7 @@ table3
 <img width="370" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/b27c8ac0-4ca0-4383-95c0-4092d10e1a1f">
 
 
+
 **2. Sending vs. Opening Snaps [Snapchat SQL Interview Question]**
 
 ***Question***:
