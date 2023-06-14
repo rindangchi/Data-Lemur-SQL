@@ -1,6 +1,6 @@
 # Data-Lemur-SQL
 This repository contains my answer of data lemur SQL practice. You can practice SQL for free from top IT companies on this website [Data Lemur](https://datalemur.com/).
-I wrote this repository for learning purpose. 
+I wrote this repository for learning purpose, the anwers below are my own solution. 
 
 **1. User's Third Transaction [Uber SQL Interview Question]**
 
@@ -83,6 +83,35 @@ group by age_bucket ) y
 <img width="397" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/f1e3f63b-2605-4cc0-b9ad-19f7c28b5553">
 
 
+**3. Tweets' Rolling Averages [Twitter SQL Interview Question]**
+
+***Question:***
+
+Given a table of tweet data over a specified time period, calculate the 3-day rolling average of tweets for each user. Output the user ID, tweet date, and rolling averages rounded to 2 decimal places.
+Notes:
+A rolling average, also known as a moving average or running mean is a time-series technique that examines trends in data over a specified period of time.
+In this case, we want to determine how the tweet count for each user changes over a 3-day period.
+
+<img width="275" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/9d380cfb-e003-4410-8b05-27bd42aa116c">
+
+***Answer:***
+
+```sql
+with CT as(
+select user_id, tweet_date, tweet_count
+from tweets
+group by user_id, tweet_date, tweet_count
+order by user_id, tweet_date)
+
+
+select user_id,tweet_date,  
+round(avg(tweet_count)
+over
+(partition by user_id order by tweet_date rows between 2 PRECEDING AND CURRENT ROW ),2) rolling_avg_3days
+from CT 
+```
+
+<img width="407" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/15cdcf7d-e815-4db9-b997-4d1020db8a18">
 
 
 
