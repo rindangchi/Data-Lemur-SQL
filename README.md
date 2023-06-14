@@ -26,7 +26,7 @@ table3
 
 <img width="370" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/b27c8ac0-4ca0-4383-95c0-4092d10e1a1f">
 
-
+<br></br>
 
 **2. Sending vs. Opening Snaps [Snapchat SQL Interview Question]**
 
@@ -81,7 +81,7 @@ group by age_bucket ) y
 ```
 
 <img width="397" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/f1e3f63b-2605-4cc0-b9ad-19f7c28b5553">
-
+<br></br>
 
 **3. Tweets' Rolling Averages [Twitter SQL Interview Question]**
 
