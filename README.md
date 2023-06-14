@@ -167,3 +167,27 @@ as table1
 
 <img width="338" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/3bcae69a-b459-4fdc-a91a-7a4b3753f491">
 
+<br></br>
+
+**6. Average Review Ratings [Amazon SQL Interview Question]**
+
+***Question:***
+
+Given the reviews table, write a query to retrieve the average star rating for each product, grouped by month. The output should display the month as a numerical value, product ID, and average star rating rounded to two decimal places. Sort the output first by month and then by product ID.
+
+<img width="299" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/9608fc81-1f8e-476c-b8f7-67cd65c7f083">
+
+
+***Answer:***
+
+```sql
+select extract(month from submit_date)as mth, product_id as product, round(avg(stars),2) as avg_stars
+from reviews
+group by mth, product
+order by mth, product
+```
+
+<img width="349" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/db2278c5-c286-4ac5-aa20-52e637817e5b">
+
+
+
