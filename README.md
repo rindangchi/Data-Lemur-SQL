@@ -113,6 +113,57 @@ from CT
 
 <img width="407" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/15cdcf7d-e815-4db9-b997-4d1020db8a18">
 
+<br></br>
 
+**4. Highest-Grossing Items [Amazon SQL Interview Question]**
 
+***Question:***
+
+Assume you're given a table with information on Amazon customers and their spending on products in different categories, write a query to identify the top two highest-grossing products within each category in the year 2022. The output should include the category, product, and total spend.
+
+<img width="404" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/e79a8b12-5c3a-46d8-aea5-ed82baa9f875">
+
+***Answer:***
+
+```sql
+select category, product, total_spend
+from(
+select category,product,sum(spend) total_spend, row_number()
+over(partition by category order by sum(spend) desc) 
+from(
+SELECT *
+FROM  PRODUCT_SPEND   
+where extract(year from transaction_date) = 2022
+) table1
+group by product,category) table2
+where row_number in (1,2)
+```
+
+<img width="405" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/f494dfef-7937-4cd0-ac57-8f2bfc11c085">
+
+<br></br>
+
+**5. Duplicate Job Listings [Linkedin SQL Interview Question]**
+
+***Question:***
+
+Assume you are given the table below that shows job postings for all companies on the LinkedIn platform. Write a query to get the number of companies that have posted duplicate job listings.
+Clarification:
+Duplicate job listings refer to two jobs at the same company with the same title and description.
+
+<img width="428" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/841724f1-ee9d-4af2-8ab8-a0d15e61141b">
+
+***Answer:***
+
+```sql
+select count(company_id) as duplicate_companies
+from(
+select company_id, title, description, count(*) as count_job
+from job_listings
+group by company_id, title, description
+having count(*) > 1)
+as table1
+```
+
+<img width="338" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/3bcae69a-b459-4fdc-a91a-7a4b3753f491">
 
