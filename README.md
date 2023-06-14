@@ -2,7 +2,7 @@
 This repository contains my answer of data lemur SQL practice. You can practice SQL for free from top IT companies on this website [Data Lemur](https://datalemur.com/).
 I wrote this repository for learning purpose, the anwers below are my own solution. 
 
-**1. User's Third Transaction [Uber SQL Interview Question]**
+**1. User's Third Transaction Uber SQL Interview Question**
 
 ***Question:***
 
@@ -28,7 +28,7 @@ table3
 
 <br></br>
 
-**2. Sending vs. Opening Snaps [Snapchat SQL Interview Question]**
+**2. Sending vs. Opening Snaps Snapchat SQL Interview Question**
 
 ***Question***:
 
@@ -83,7 +83,7 @@ group by age_bucket ) y
 <img width="397" alt="image" src="https://github.com/rindangchi/Data-Lemur-SQL/assets/10241058/f1e3f63b-2605-4cc0-b9ad-19f7c28b5553">
 <br></br>
 
-**3. Tweets' Rolling Averages [Twitter SQL Interview Question]**
+**3. Tweets' Rolling Averages Twitter SQL Interview Question**
 
 ***Question:***
 
@@ -115,7 +115,7 @@ from CT
 
 <br></br>
 
-**4. Highest-Grossing Items [Amazon SQL Interview Question]**
+**4. Highest-Grossing Items Amazon SQL Interview Question**
 
 ***Question:***
 
@@ -143,7 +143,7 @@ where row_number in (1,2)
 
 <br></br>
 
-**5. Duplicate Job Listings [Linkedin SQL Interview Question]**
+**5. Duplicate Job Listings Linkedin SQL Interview Question**
 
 ***Question:***
 
@@ -169,7 +169,7 @@ as table1
 
 <br></br>
 
-**6. Average Review Ratings [Amazon SQL Interview Question]**
+**6. Average Review Ratings Amazon SQL Interview Question**
 
 ***Question:***
 
